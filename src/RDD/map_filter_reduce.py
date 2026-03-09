@@ -13,3 +13,4 @@ print(rdd3.collect())
 
 rdd4=rdd.reduce(lambda x,y: x+y)
 print(rdd4)
+spark.stop()
