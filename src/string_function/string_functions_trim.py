@@ -15,3 +15,12 @@ data = [
 columns = ["id","name","email","product","city","employee_code"]
 
 df = spark.createDataFrame(data,columns)
+
+df.select(
+    col("city"),
+    trim('city').alias('trimmed'),
+    ltrim('city').alias('left_trim'),
+    rtrim('city').alias('right_trim')
+).show()
+
+
